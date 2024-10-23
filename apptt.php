@@ -50,6 +50,7 @@
       <option value="Laser">Laser Therapy</option>
       <option value="PE">Physical Exams</option>
       <option value="Surgery">Surgery</option>
+      <option value="Null">Null</option>
     </select>
     <br><br>
 
@@ -59,6 +60,7 @@
       <option value="Hair Cutting">Hair Cutting</option>
       <option value="Bath">Bath</option>
       <option value="Prophy">Prophy</option>
+      <option value="Null">Null</option>
     </select>
     <br><br>
 
@@ -127,7 +129,7 @@
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
     $login_session = $_SESSION['login_user'];
-
+  
     // Correct the query by using the appropriate column name
     $qry = "SELECT id FROM pma__users WHERE username='$login_session'";
     $res = mysqli_query($link, $qry);
